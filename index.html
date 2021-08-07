@@ -152,39 +152,78 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-用hexo和github搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/06/hello-world/">Hello World</a>
+      <a class="article-title" href="/2021/08/07/%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">用hexo和github搭建个人博客</a>
     </h1>
   
 
         
-        <a href="/2021/08/06/hello-world/" class="archive-article-date">
-  	<time datetime="2021-08-06T12:51:53.656Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-06</time>
+        <a href="/2021/08/07/%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2021-08-07T00:20:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本文是对使用hexo和github搭建个人博客过程的记录。过程中参考了hexo官网和程序羊的视频，在这里对他们进行感谢。程序羊使用了Mac电脑进行配置，且使用cnpm使下载速度更快。与之不同的是，本文所使用的是Window电脑，且仅使用npm下载。</p>
+<hr>
+<h2 id="环境及安装后各个包的版本"><a href="#环境及安装后各个包的版本" class="headerlink" title="环境及安装后各个包的版本"></a>环境及安装后各个包的版本</h2><p>PC: Windows10</p>
+<p>终端：cmder</p>
+<p>npm：6.14.14</p>
+<p>hexo: 5.4.0</p>
+<h1 id="安装hexo过程"><a href="#安装hexo过程" class="headerlink" title="安装hexo过程"></a>安装hexo过程</h1><h2 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h2><p>npm是和node.js一同安装的包管理工具，因此我们到node.js的官网<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/%E8%BF%9B%E8%A1%8C%E4%B8%8B%E8%BD%BD%E3%80%82%E6%88%91%E8%BF%99%E9%87%8C%E9%80%89%E6%8B%A9%E4%BA%86">https://nodejs.org/en/download/进行下载。我这里选择了</a> <strong>Windows Installer (.msi)</strong> 64-bit下载。下载后双击打开跟着提示一步一步安装即可。</p>
+<p>完成后打开终端输入<code>npm -v</code>即可查询npm版本号。这里我选用的终端是cmder，windows自带的cmd也是一样的，但是powershell却不成功。 最初我直接打开Cmder也不行，然后我打开了一个新的窗口，<font color='red'>选择打开Cmder as admin输入npm就有结果了</font> 。</p>
+<h2 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装hexo框架</h2><p>继续在终端中输入如下指令安装hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli </span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>安装完成可以使用如下命令查看hexo版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h1 id="hexo简单使用"><a href="#hexo简单使用" class="headerlink" title="hexo简单使用"></a>hexo简单使用</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>方法1：手动创建文件夹，进入文件夹中打开终端，输入如下命令就可以将刚刚创建的文件夹初始化博客 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>方法2：直接在hexo init后加上文件夹的名字，就可以自动的创建这个文件夹并初始化为博客。如这里创建了一个以blog为根目录的博客文件夹。日后所有管理都在这个文件夹中进行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n my_first_blog</span><br></pre></td></tr></table></figure>
+
+<p>my_first_blog这里换成新建文章的名称。这条命令会自动在source\_posts路径下创建一个同名markdown文档，这个就是要写的博客。</p>
+<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件和已生成的静态文件。 </p>
+<h2 id="启动本地博客服务"><a href="#启动本地博客服务" class="headerlink" title="启动本地博客服务"></a>启动本地博客服务</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>输入上面的指令后就可以在本地<a href="http://localhost:4000查看博客。">http://localhost:4000查看博客。</a></p>
+<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h2 id="换主题"><a href="#换主题" class="headerlink" title="换主题"></a>换主题</h2><p>在blog根目录下clone如下主题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<p>更改_config.yml文件，查找theme，将默认的landscape改为yilia</p>
+<h1 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h1><p>先安装一下工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git </span><br></pre></td></tr></table></figure>
+
+<p>在github中创建一个新repo，并命名为&lt;github用户名&gt;.github.io</p>
+<p>修改_config.yml文件, 在文件结尾处修改一下信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 这里填入新创建repo的url</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>上面步骤都做完后，以后就可以直接输入一下命令来将博客部署到github上了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>部署完成后，可以使用访问https://&lt;github用户名&gt;.github.io/查看博客了。</p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ol>
+<li>hexo官网 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">https://hexo.io/zh-cn/index.html</a></li>
+<li>CodeSheep 手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=8618735419082415842">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=8618735419082415842</a></li>
+</ol>
 
       
 
@@ -197,7 +236,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/06/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/08/07/%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
         </p>
       
 
