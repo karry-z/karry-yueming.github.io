@@ -20,23 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="问题与配置树莓派4B python2环境 安装tensorflow1.14.0 上网打开浏览器，默认是bing，bing显示安全问题不能连接 后来发现百度能正常上网 解决： 树莓派需要手动矫正时间，连接显示器打开右上角时钟联网会自动矫正。 再检查代理有没有开 安装tf https:&#x2F;&#x2F;github.com&#x2F;lhelontra&#x2F;tensorflow-on-arm&#x2F;releases  下载相应版本">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ZHANG Kairui">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:title" content="setup_tensorflow">
+<meta property="og:url" content="http://example.com/blog/%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C/1.%E5%AE%89%E8%A3%85tf1.14/index.html">
 <meta property="og:site_name" content="ZHANG Kairui">
+<meta property="og:description" content="问题与配置树莓派4B python2环境 安装tensorflow1.14.0 上网打开浏览器，默认是bing，bing显示安全问题不能连接 后来发现百度能正常上网 解决： 树莓派需要手动矫正时间，连接显示器打开右上角时钟联网会自动矫正。 再检查代理有没有开 安装tf https:&#x2F;&#x2F;github.com&#x2F;lhelontra&#x2F;tensorflow-on-arm&#x2F;releases  下载相应版本">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-12T07:34:13.000Z">
+<meta property="article:modified_time" content="2021-09-13T07:23:13.293Z">
 <meta property="article:author" content="ZHANG Kairui">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/blog/%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C/1.%E5%AE%89%E8%A3%85tf1.14/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"archives/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://example.com/blog/%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C/1.%E5%AE%89%E8%A3%85tf1.14/index.html","path":"blog/空地协同/1.安装tf1.14/index.html","title":"setup_tensorflow"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Archive | ZHANG Kairui</title>
+<title>setup_tensorflow | ZHANG Kairui
+</title>
   
 
 
@@ -100,7 +105,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -113,6 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">问题与配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E7%BD%91"><span class="nav-number">2.</span> <span class="nav-text">上网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85tf"><span class="nav-number">3.</span> <span class="nav-text">安装tf</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85h5py"><span class="nav-number">4.</span> <span class="nav-text">安装h5py</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -160,69 +166,69 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner page posts-expand">
+  
+  
 
 
-  
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 2 posts in total. Keep on posting.</span>
-      </div>
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">setup_tensorflow
+</h1>
+
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/blog/">BLOG</a></li>
+            <li><a href="/blog/%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C/">空地协同</a></li>
+          <li>1.安装TF1.14</li>
+        
+  </ul>
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+      
+      <div class="post-body">
+          <h1 id="问题与配置"><a href="#问题与配置" class="headerlink" title="问题与配置"></a>问题与配置</h1><p>树莓派4B</p>
+<p>python2环境</p>
+<p>安装tensorflow1.14.0</p>
+<h1 id="上网"><a href="#上网" class="headerlink" title="上网"></a>上网</h1><p>打开浏览器，默认是bing，bing显示安全问题不能连接</p>
+<p>后来发现百度能正常上网</p>
+<p>解决：</p>
+<p>树莓派需要手动矫正时间，连接显示器打开右上角时钟联网会自动矫正。</p>
+<p>再检查代理有没有开</p>
+<h1 id="安装tf"><a href="#安装tf" class="headerlink" title="安装tf"></a>安装tf</h1><p> <a target="_blank" rel="noopener" href="https://github.com/lhelontra/tensorflow-on-arm/releases">https://github.com/lhelontra/tensorflow-on-arm/releases</a> </p>
+<p>下载相应版本</p>
+<p> <a target="_blank" rel="noopener" href="https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.14.0-buster/tensorflow-1.14.0-cp27-none-linux_aarch64.whl">tensorflow-1.14.0-cp27-none-linux_aarch64.whl</a> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow-1.14.0-cp27-none-linux_aarch64.whl</span><br></pre></td></tr></table></figure>
+
+<p>安装h5py失败</p>
+<h1 id="安装h5py"><a href="#安装h5py" class="headerlink" title="安装h5py"></a>安装h5py</h1><p>单独安装h5py，报以下错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Couldn&#x27;t find index page for &#x27;pkgconfig&#x27; (maybe misspelled?)</span><br></pre></td></tr></table></figure>
+
+<p> <a target="_blank" rel="noopener" href="https://pypi.python.org/simple/pkgconfig">https://pypi.python.org/simple/pkgconfig</a> </p>
+<p>我下载并用pip安装了 <a target="_blank" rel="noopener" href="https://files.pythonhosted.org/packages/c9/8a/d1569da3a485270ce714858efb1989065a4eed0187cf5e1e53ebeb52cecd/pkgconfig-1.5.0-py2.py3-none-any.whl#sha256=fda18de348f9f2dbcc30ddbdf30eb664bdd7d236d7730aef64b1d288e7c1bc26">pkgconfig-1.5.0-py2.py3-none-any.whl</a> </p>
+<p>再次安装h5py，成功</p>
+
+      </div>
+      
+      
+      
     </div>
+  <ul class="breadcrumb">
+            <li><a href="/blog/">BLOG</a></li>
+            <li><a href="/blog/%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C/">空地协同</a></li>
+          <li>1.安装TF1.14</li>
+        
+  </ul>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-24T07:51:13+08:00"
-              content="2021-09-24">
-          09-24
-        </time>
-      </div>
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/24/index.assets/download/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-08-10T09:02:38+08:00"
-              content="2021-08-10">
-          08-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/08/10/index/" itemprop="url">
-            <span itemprop="name">About Me</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
-  </div>
-  
-  
-  
 
 </div>
   </main>
